@@ -163,7 +163,13 @@ public class ArrayPractice
   */
   public static boolean isSorted( int[] data )
   {
-    /* YOUR BRILLIANT CODE HERE */
+    // set up the loop
+    for (int i=0; i<data.length-1; i++){
+      // conditional statement
+      if (data[i] > data[i+1]){
+        return false;
+      }
+    }
 
     return true; // replace this
 
@@ -202,6 +208,11 @@ public class ArrayPractice
     int count =0;
 
     /* YOUR BRILLIANT CODE HERE */
+    for (int i=0; i<data.length; i++){
+      if ((data[i]%2)!=0){
+        count++;
+      }
+    }
 
     // Note the % operator is the modulo (basically remainder) function
     // in java. Use to determine if an integer is odd.
@@ -221,9 +232,22 @@ public class ArrayPractice
      If the input array contains 5,8,13,7,27,2
      After the routine, the array will contain 2,27,7,13,8,5
   */
-  public static void flip( int[] data )
+  public static void flip( int[] data )  
   {
-    /* YOUR BRILLIANT CODE HERE */
+    // need to have a temporary storage array
+    int[] temp = new int[data.length]; // make with a length equal to data
+    int end = data.length -1; // the end point of the array (to make less confusing)
+    
+    // flip the order in the temporray array
+    for(int i = 0; i <= end; i++){ // <= end is equal to < data.length
+      temp[i] = data[end -i]; // So temp i will be equal to the end minus i 
+    }
+    // The temp array is in the order we want. Now to copy it back on to the 
+    // data array
+    for(int i = 0; i <= end; i++){
+      data[i] = temp[i]; // copy over item by item
+    }
+    
   }
 
 
@@ -239,9 +263,17 @@ public class ArrayPractice
     //printArray(data2);
     int[] data3 = {1,5,2,7,5,8,5,12,19,5}; 
     // System.out.println(findMaxValue(data3));
-    int[] data4 = {5,2,4,10};
+    // int[] data4 = {5,2,4,10};
     //System.out.println(arraySum(data4));
-    System.out.println(firstOccurence(data3, 5));
+    // System.out.println(firstOccurence(data3, 5));
     // add calls to show that the methods you write work.
+    //int[] data5 = {5,6,7,8,9,10};
+    //System.out.println(countOdds(data5));
+    System.out.print("Before: ");
+    printArray(data3);
+    System.out.println();
+    flip(data3);
+    System.out.print("After: ");
+    printArray(data3);
   }
 }
