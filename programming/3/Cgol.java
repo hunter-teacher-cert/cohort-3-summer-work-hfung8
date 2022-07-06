@@ -81,14 +81,17 @@ public class Cgol
     int row = board.length;
     int col = board[0].length;
     int count = 0;
-    for (int i = Math.max(0, r - 1); i < row && i <= r + 1; i++){
-      for (int j = Math.max(0, c - 1); j < col && j <= c + 1 ; j++){
+    for (int i = r - 1; i <= r + 1;  i++){
+      if (i >=0 && i < row){
+       for (int j = Math.max(0, c - 1); j < col && j <= c + 1 ; j++){
       
         if (!(i == r && j == c)){ //if not on the target cell
           //System.out.println("Row " + i + ", column " + j);
           if (board[i][j] != '-'){ //if cell is not a space (dead)
             count += 1;
-          }
+          } 
+      }
+      
         }
       }
     }
@@ -103,14 +106,14 @@ public class Cgol
   */
   public static char getNextGenCell( char[][] board,int r, int c )
   {
-    int neighbors = countNeighbours(board, r, c);
+    int liveNeighbors = countNeighbours(board, r, c);
     if (board[r][c] == 'X'){ //if cell is alive
-      if (neighbors == 2 || neighbors == 3){ //and has 2 or 3 neighbors
+      if (liveNeighbors == 2 || liveNeighbors == 3){ //and has 2 or 3 neighbors
         return 'X'; //it stays alive
       }
     }
     else { //if cell is dead
-      if (neighbors == 3){ //and has exactly 3 neighbors
+      if (liveNeighbors == 3){ //and has exactly 3 neighbors
         return 'X'; //it comes to life
       }
     }
@@ -160,6 +163,8 @@ public class Cgol
     System.out.println("Next gen status of cell at row 3 column 3:");
     System.out.println(getNextGenCell(board, 3, 3)); //dead and should stay dead
     System.out.println("--------------------------\n\n");
+
+    
     board = generateNextBoard(board);
     System.out.println("Gen X+1:");
     printBoard(board);
