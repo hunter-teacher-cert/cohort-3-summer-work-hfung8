@@ -102,7 +102,9 @@ public class Rational
     we can rewrite this as a product for both terms*/
     int numerator_quotient = this._numerator*r._denominator;
     int denom_quotient = this._denominator*r._numerator;
-            
+    if (r._numerator == 0){
+      System.out.println("The denominator is invalid.");
+    }
    System.out.println(numerator_quotient+"/"+denom_quotient);
   }
 
