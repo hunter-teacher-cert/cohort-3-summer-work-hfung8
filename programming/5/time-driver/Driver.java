@@ -31,9 +31,13 @@ public class Driver {
   h = new Time(0,2,0);
   t.set(5,28,30);
   t.add(h);
+  Time z;
+  z = new Time(4,30,35);
+  int compare2 = t.compareTo(z);
+  System.out.println(compare2);
   System.out.println(t.toString());
   int compare = t.compareTo(h);
   System.out.println(compare);
-    }//end main()
+  }//end main()
 
 }//end class

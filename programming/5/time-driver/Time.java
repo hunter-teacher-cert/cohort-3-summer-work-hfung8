@@ -101,6 +101,8 @@ public class Time {
       hours += other.hours;
       minutes += other.minutes;
       seconds += other.seconds;
+
+      
     }
 
 
@@ -131,12 +133,20 @@ public class Time {
     */
     public int compareTo(Time other){
 	// your code here)
-    if (hours > other.hours || minutes > other.minutes || seconds > other.seconds){
-      return 1;
+    if (hours > other.hours){
+      if (minutes > other.minutes){
+        if (seconds > other.seconds){
+          return 1;
+        }
+      }
     }
-    else if (hours < other.hours || minutes < other.minutes || seconds < other.seconds){
-      return -1; 
-    }
-	return 0; // change this
+    else if (hours < other.hours){
+          if (minutes < other.minutes){ 
+            if (seconds < other.seconds){
+            return -1;
+          }
+        }
+      }
+	  return 0; // change this
     }
 }//end class
