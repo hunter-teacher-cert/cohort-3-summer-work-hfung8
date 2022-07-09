@@ -93,6 +93,11 @@ public class Array2DPractice
   {
     
     /* YOUR AWESOME CODE HERE */
+    // set the column for the board we have the row as a parameter
+    for (int col = 0; col < board[row].length; col++){
+      // set up the column
+      board[row][col] = value;
+      }
   }
 
 
@@ -241,6 +246,9 @@ public class Array2DPractice
   public static void main( String[] args )
   {
     char[][] b = buildBoard(5,10,'z');
+    printBoard(b);
+    System.out.println();
+    setRow(b,2,'@');
     printBoard(b);
     System.out.println();
     // char [][] c = copyBoard(b);
