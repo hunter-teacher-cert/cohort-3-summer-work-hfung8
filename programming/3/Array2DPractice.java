@@ -240,26 +240,34 @@ public class Array2DPractice
   public static void downString( char[][] board, int row, int col, String word )
   {
     /* YOUR AWESOME CODE HERE */
+    // since col doesn't change we don't need a for loop to add to keep looping throught it. 
+    // we keep adding one to the row so we need to keep looping through it. 
+    // we can use one for loop, things get messy if there are more than two, and use two variables in the iterator. Note that there can't be two int used for int k and int i.
+    // print up to board.length - row
+    int columnLength = board.length - row;
+    for (int i = row, k = 0 ; i <= board.length && k <             columnLength; i++, k++){
+      board[i][col] = word.charAt(k); 
+    }
   }
-
 
   public static void main( String[] args )
   {
-    char[][] b = buildBoard(5,10,'z');
-    printBoard(b);
-    System.out.println();
-    setRow(b,2,'@');
-    printBoard(b);
-    System.out.println();
-    // char [][] c = copyBoard(b);
+    char[][] b = buildBoard(7,6,'z');
     // printBoard(b);
     // System.out.println();
-    // printBoard(c);
-    explodeSquare(b, 4, 6);
-    printBoard(b);
-    System.out.println();
-    explodeSquare(b, 0, 9);
-    printBoard(b);
+    // setRow(b,2,'@');
+    // printBoard(b);
+    // System.out.println();
+    // // char [][] c = copyBoard(b);
+    // // printBoard(b);
+    // // System.out.println();
+    // // printBoard(c);
+    // explodeSquare(b, 4, 6);
+    // printBoard(b);
+    // System.out.println();
+    // explodeSquare(b, 0, 9);
+    // printBoard(b);
+    // System.out.println();
     //char board3 [][] = new char [2][3];  //allows us to setup and create our board
     //b[0][0] = 'j';
     //b[0][1] = 'X';
@@ -271,7 +279,10 @@ public class Array2DPractice
     //System.out.println();
     //explodeAllChar(b, 'q');
     //printBoard(b);
-    
+    downString(b, 1, 1, "Hellow");
+    downString(b, 3, 3, "Worldsauce");
+    downString(b, 4, 4, "carl");
+    printBoard(b);
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
