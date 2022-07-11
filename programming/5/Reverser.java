@@ -20,7 +20,7 @@ public class Reverser
         dummyString = dummyString + s.charAt(i);
       }
     return dummyString;
-**/
+  **/
   public static String reverseR( String s, String firstString)
   {
     /** using recursion but added an additional parameter for holding the final value because we can't reintialiaze over and over and need a way to keep incrementing the final value
@@ -48,15 +48,15 @@ public class Reverser
   public static void main( String[] args )
   {
     System.out.println( reverseR("odd", "") ); 
-    System.out.println();
+    System.out.println("=================================");
     System.out.println( reverseR("even", "") );
-    System.out.println();
+    System.out.println("=================================");
     System.out.println( reverseR("abcdefg", "") );
-    System.out.println();
+    System.out.println("=================================");
     System.out.println( reverseR("stressed", "") );
-    System.out.println();
+    System.out.println("=================================");
     System.out.println( reverseR("amanaplanacanalPanama", "") );
-
+    System.out.println("=================================");
     //more tests welcome
     // got some good palindromes?
   }
