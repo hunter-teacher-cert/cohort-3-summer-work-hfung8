@@ -124,8 +124,11 @@ public class AlPractice{
   - The parameter ArrayLists should not be modified.
   */
   public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
+    int size = ListA.size() + ListB.size();
+    ArrayList<Integer> a = new ArrayList<Integer>(size);
     
-    return null;//placeholder to compile.
+    
+    return a;//placeholder to compile.
   }
 
 
@@ -162,6 +165,9 @@ public class AlPractice{
     ArrayList<Integer> cl;
     cl = sumLists(al, bl);
     System.out.println(cl);
+    ArrayList<Integer> dl; 
+    dl = zipLists(al,bl);
+    System.out.println(dl);
   }
 
 }
