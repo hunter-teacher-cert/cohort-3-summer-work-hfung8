@@ -35,7 +35,7 @@ public class LinkedList{
   */
   public void add(String value){
     Node n1 = new Node(value, head);
-    head = n1;
+    head = n1; 
   }
 
   /**
@@ -58,7 +58,7 @@ public class LinkedList{
     walker = head;
     String stringList = "";
     while (walker.getNext() != null){
-      stringList = walker.getData() + "->";
+      stringList += walker.getData() + "->";
       walker = walker.getNext();
     }
     stringList += walker.getData();
@@ -93,8 +93,20 @@ public class LinkedList{
   "a"-> "z" -> "b" -> "c" -> "d"
   */
   public void add(int index, String value){
-    for (int i = 0; i < )
-    
+    if (index == 0){
+      this.add(value);
+    } else {
+    Node walker; 
+    walker = head;
+    Node z = new Node();
+    z.setData(value);
+    for (int i = 0; i < index - 1; i++){
+      walker = walker.getNext();
+    }
+    Node j = walker.getNext();
+    z.setNext(j);
+    walker.setNext(z);
+    }
   }
 
 
@@ -107,7 +119,14 @@ public class LinkedList{
   indexOf("d") would return 3 since "d" is at location 3.
   */
   public int indexOf(String value){
-    return 0;
+    Node walker = head; 
+    for (int i = 0; i < this.size(); i++){
+      if (walker.getData() == value){
+        return i;
+      }
+      walker = walker.getNext();
+    }
+    return -1;
   }
 
 
@@ -118,7 +137,12 @@ public class LinkedList{
   the array.
   */
   public String[] toArray(){
-    return null;
+    Node walker = head;
+    String[] d = new String[this.size()];
+    for (int i = 0; i < d.length; i++){
+      d[i] = this.get(i);
+    }
+    return d;
   }
 
 
@@ -133,5 +157,12 @@ public class LinkedList{
   "a"->"b"->"d"->"e"
   */
   public void remove(int index){
+    Node walker = head; 
+    for (int i = 0; i < index; i++){
+      if (i == index){
+        
+      }
+      walker = walker.getNext();
+    }
   }
 }
