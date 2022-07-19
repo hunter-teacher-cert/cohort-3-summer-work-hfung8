@@ -12,6 +12,8 @@ public class Driver{
     l.add(0, "j");
     String[] p = l.toArray();
     System.out.println(l);
+    l.remove(2);
+    System.out.println(l);
     for (int i = 0; i < p.length; i++){
       System.out.println(p[i]);
     }

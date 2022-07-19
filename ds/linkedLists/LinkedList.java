@@ -18,6 +18,7 @@ toArray()
 Challenge
 --------
 remove(int index);
+Harrison Fung, Yenmin Young, Jenna Lin, Kianna Herr
 */
 
 public class LinkedList{
@@ -156,13 +157,18 @@ public class LinkedList{
   remove(2) results in:
   "a"->"b"->"d"->"e"
   */
-  public void remove(int index){
-    Node walker = head; 
-    for (int i = 0; i < index; i++){
-      if (i == index){
-        
+    public void remove(int index){
+      Node walker = head; 
+      if (index == 0){
+        head = walker.getNext();
+      } else {
+      for (int i = 0; i < this.size(); i++){
+        if (i == index-1){
+         walker.setNext(walker.getNext().getNext());  
+         break;
+        }
+        walker = walker.getNext();
       }
-      walker = walker.getNext();
     }
   }
 }
