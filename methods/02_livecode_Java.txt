@@ -1,3 +1,4 @@
+//Teachers: Mr. Fung, Ms. Goldstein, Mr. Grant-Knight, Mr. Hawkins
 // Working test version in lessonDemo.java
 // Code to comment:
 
