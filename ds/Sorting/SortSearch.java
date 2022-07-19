@@ -72,7 +72,7 @@ public class SortSearch{
 	    int smallIndex = start;
       int last = data.size() - start;
       for (int i = start; i < last; i++){
-        // i holds the smallest value so we make smallIndex equal to it
+        // i holds the smaller value so we make smallIndex equal to it
         if (data.get(smallIndex) > data.get(i)){
           smallIndex = i; 
         }
