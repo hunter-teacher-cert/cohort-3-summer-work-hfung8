@@ -32,7 +32,7 @@ public class SortSearch{
     public SortSearch(){
 	data = new ArrayList<Integer>();
 	r = new Random();
-	for (int i=0;i<7;i++){
+	for (int i=0;i<15;i++){
 	    data.add(r.nextInt(20));
 	}
 	
@@ -70,8 +70,7 @@ public class SortSearch{
     */
     public int findSmallestIndex(int start){
 	    int smallIndex = start;
-      int last = data.size() - start;
-      for (int i = start; i < last; i++){
+      for (int i = start; i < data.size(); i++){
         // i holds the smaller value so we make smallIndex equal to it
         if (data.get(smallIndex) > data.get(i)){
           smallIndex = i; 

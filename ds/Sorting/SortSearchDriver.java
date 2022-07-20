@@ -7,16 +7,15 @@ public class SortSearchDriver {
 
 	// Uncomment these to test part 1
 	
-	SortSearch ss = new SortSearch();
+	SortSearch ss = new SortSearch(20);
 	System.out.println(ss);
-	
+System.out.println("==================================================================");
 		
 	// Uncomment these to test part 2
 
 	int i;
-	// i = ss.findSmallestIndex(0);
-	// System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss);
- 
+	i = ss.findSmallestIndex(0);
+	System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss); System.out.println("==================================================================");
 	i = ss.findSmallestIndex(2);
 	System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
 	
