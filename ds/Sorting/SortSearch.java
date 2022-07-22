@@ -33,7 +33,7 @@ public class SortSearch{
 	data = new ArrayList<Integer>();
 	r = new Random();
 	for (int i=0;i<15;i++){
-	    data.add(r.nextInt(20));
+	    data.add(r.nextInt(100));
 	}
 	
     }
@@ -42,7 +42,7 @@ public class SortSearch{
 	data = new ArrayList<Integer>();
 	r = new Random();
 	for (int i=0;i<size;i++){
-	    data.add(r.nextInt(20));
+	    data.add(r.nextInt(100));
 	}
 	
     }
@@ -118,18 +118,12 @@ public class SortSearch{
     */
   public int linearSearch(int value)
   {
-    int firstOccurrence = -1;  // base case not foudn
-
     int i = 0;
-    while((i < data.size()) &&(firstOccurrence == -1))
-    { // only runs while fO not found
-      if(data.get(i) == value)
-      { 
-        firstOccurrence = i; // found value
-      }
-      i++;
-    }
-    return firstOccurrence;
+	  for (i=0;i<data.size();i++){
+	    if (data.get(i)==value)
+		  return i;
+	  }
+	return -1;
   }
     
     /**
@@ -148,9 +142,9 @@ public class SortSearch{
     //initializing low, mid, and high
     low = 0;
     high = data.size();
-    mid = (low + high)/2;
-    while (low < high)
+    while (low <= high)
     {
+    mid = (low + high)/2;
       //if value is less than data.get(mid), then we need to move one unit to the left
       if (value == data.get(mid))
       {
@@ -159,15 +153,15 @@ public class SortSearch{
       else if (value < data.get(mid))
       {
         high = mid - 1;
-        mid = (low + high)/2;
+        // mid = (low + high)/2;
       }
-      else if (value > data.get(mid))
+      else
       {
         low = mid + 1;
-        mid = (low + high)/2;
+        // mid = (low + high)/2;
       }
     }
-  	return -1;
+    return -1;
   }
     /**
        Implement a RECURSIVE binary search as specified by the comments

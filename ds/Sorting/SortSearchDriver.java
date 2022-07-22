@@ -50,11 +50,6 @@ System.out.println("============================================================
  start = System.currentTimeMillis();
 System.out.println("==================================================================");	
 
-  ArrayList<Integer> data = new ArrayList<Integer>(1000000); // make it large
-  for (int j = 0 ; j < 1000000; j++){
-    data.add(j);
-  }
-
   System.out.println(ss); 
   System.out.println(ss.binarySearch(0));
   System.out.println(ss.binarySearch(10));
