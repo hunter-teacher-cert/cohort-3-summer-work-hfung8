@@ -67,5 +67,26 @@ System.out.println("============================================================
       
 	elapsed = System.currentTimeMillis() - start;
 	System.out.println("Size: " + size + " Time: " + elapsed);
+
+System.out.println("==================================================================");	
+
+ArrayList<Integer> a= ss.buildIncreasingList(20);
+	System.out.println(a);
+
+System.out.println("first list ==================================================================");
+      
+	// build a second Arralist here
+	ArrayList<Integer> b = ss.buildIncreasingList(30);
+  System.out.println(b);
+
+System.out.println("second list ==================================================================");
+      
+	// test your merge routine here
+
+ArrayList<Integer> c = ss.merge(a,b);
+  System.out.println(c);
+
+System.out.println("merged list ==================================================================");
+      
   }
 }
