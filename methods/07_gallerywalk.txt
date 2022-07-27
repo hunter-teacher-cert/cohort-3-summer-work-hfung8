@@ -1,0 +1,30 @@
+Harrison Fung
+Methods Summer 2022
+GALLERY TOUR LOG
+
+
+USAGE OF TOP SECTION: 
+====================================================
+DISCOVERIES:
+* any cool tips/tricks/hacks you learned
+* 1 per line, please
+using a box to signify something in the markdown
+
+
+LINGERING QUESTIONS:
+* 1 per line, please
+Linking to program folders or making them downloadable. 
+
+COMMENTS/CONCERNS/OTHER:
+* 1 per line, please
+====================================================
+
+
+USAGE OF BOTTOM SECTION: 
+* For any site you deem notable, add an entry using the format below
+====================================================
+notable site:
+URL
+notable aspect:
+what is cool about this site
+-------------------------------------

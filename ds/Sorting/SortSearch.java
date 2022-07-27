@@ -239,7 +239,7 @@ public class SortSearch{
        
     */
        
-    public ArrayList<Integer> merge(ArrayList<Integer> list1,
+    public static ArrayList<Integer> merge(ArrayList<Integer> list1,
 				    ArrayList<Integer> list2){
 
 	// code for merge
@@ -265,5 +265,27 @@ public class SortSearch{
   }    
 	
 	return arraymerged; // replace this line
+  }
+
+  public static ArrayList<Integer> mergeSort(ArrayList<Integer> list){
+  // check the size if it is smaller than 2 than return the list, if not then we sort using mergeSort recursively
+    if (list.size() < 2){
+      return list;
+    } else {//Split the list
+      ArrayList<Integer> left = new ArrayList<Integer>();
+      ArrayList<Integer> right = new ArrayList<Integer>();
+      // fill the first list with the first half
+      for (int i = 0; i < list.size()/2; i++){
+        left.add(list.get(i));
+      }
+      for (int j = list.size()/2; j < list.size(); j++){
+        right.add(list.get(j));
+      }
+      //call mergeSort recursively and merge using merge
+      left = mergeSort(left);
+      right = mergeSort(right);
+      //Call the merge function that takes in two lists
+      return merge(left, right);
+    }
   }
 }

@@ -87,6 +87,27 @@ ArrayList<Integer> c = ss.merge(a,b);
   System.out.println(c);
 
 System.out.println("merged list ==================================================================");
-      
+
+    int size1 = 1000;
+    ArrayList<Integer> test = new ArrayList<Integer>();
+    Random r = new Random();
+    for (int k=0;k<size1;k++){
+        test.add(r.nextInt(20));
+    }
+		//Setting up timing test
+    // long start, elapsed;
+    long total = 0;
+
+    // looping over the mergeSort function to determine average
+    for (int j = 0; j < 1000; j++){
+      start = System.currentTimeMillis();
+      ArrayList<Integer> merged = ss.mergeSort(test);
+      elapsed = System.currentTimeMillis() - start;
+      total += elapsed;
+    }
+    
+    
+    System.out.println("Average time to sort list of size " + size + ": " + (total / 1000) + "ms");
+
   }
 }
