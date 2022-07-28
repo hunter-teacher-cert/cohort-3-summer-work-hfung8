@@ -8,23 +8,27 @@ USAGE OF TOP SECTION:
 DISCOVERIES:
 * any cool tips/tricks/hacks you learned
 * 1 per line, please
-using a box to signify something in the markdown
-
-
+  * using a box to signify something in the markdown
+  * using a theme in order to create a fancier website 
+  * Linking to program folders or making them downloadable
+  * Understanding how to code out blocks of code using markdown
 LINGERING QUESTIONS:
 * 1 per line, please
-Linking to program folders or making them downloadable. 
+  * I like the coloring scheme for Shana's website and was wondering how she got that. 
+  * I also noticed one website which allowed us to download the link when we clicked on it, I wish I knew how to do that as well. 
+ 
 
 COMMENTS/CONCERNS/OTHER:
 * 1 per line, please
 ====================================================
+  * Shana's website is very friendly looking and professional too. Looks like a good template for a classroom website. 
 
 
 USAGE OF BOTTOM SECTION: 
 * For any site you deem notable, add an entry using the format below
 ====================================================
-notable site:
-URL
-notable aspect:
-what is cool about this site
+notable site: Shana Henry Elizabeth
+URL: https://mathiskey.github.io/nycscertweb/
+notable aspect: color scheme
+what is cool about this site: looks professional and friendly too
 -------------------------------------
