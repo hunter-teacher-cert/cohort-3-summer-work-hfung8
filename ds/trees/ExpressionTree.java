@@ -6,14 +6,11 @@ public class ExpressionTree{
   public double evaluate(){
     //base case
     if (isValue()){
-      return "" + value;
+      return value;
     //recursive case 
     } else {
-      return "( " + left.toString() + " " + operator + " " + right.toString() + " )";
+      return apply(left.evaluate(), right.evaluate(), operator);
     }
-
-    
-    return 10000000000000.0;//replace this
   }
 
   //You must write this method:
@@ -35,6 +32,15 @@ public class ExpressionTree{
     }
   }
 
+  public String toStringPrefix(){
+    //base case
+    if (isValue()){
+      return "" + value;
+  //recursive case 
+    } else {
+      return "(" + operator + " " + left.toStringPrefix() + " " + right.toStringPrefix()+ ")";
+    }
+  }
 
 
 
